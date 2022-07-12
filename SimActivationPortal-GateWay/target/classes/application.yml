@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+          - id: Sim
+            uri:
+              lb://Sim
+            predicates:
+              - Path=/sim/**
+          - id: Sim-Customer
+            uri:
+              lb://Sim-Customer
+            predicates:
+              - Path=/customer/**
+              

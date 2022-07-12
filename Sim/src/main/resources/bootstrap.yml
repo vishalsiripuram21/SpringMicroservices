@@ -1,0 +1,16 @@
+server:
+  port: 9100
+spring:
+  application:
+    name: Sim
+  cloud:
+    consul:
+      discovery:
+        hostname: localhost
+      config:
+       enabled: true
+       prefix: config
+       default-context: application
+       profile-separator: '::'
+       format: YAML
+      
